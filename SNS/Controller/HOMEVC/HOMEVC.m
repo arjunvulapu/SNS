@@ -14,6 +14,8 @@
 #import "ResaleVC.h"
 #import "RecommendedSearchVC.h"
 #import "SIgnUpViewController.h"
+#import "MyListingsVC.h"
+#import "MyProfileVC.h"
 @interface HOMEVC ()
 {
     NSMutableArray *menuList;
@@ -215,8 +217,32 @@
     _tableViewHeight.constant=_menuTableView.contentSize.height;
 }
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    RecommendedSearchVC *vc=[self.storyboard instantiateViewControllerWithIdentifier:@"RecommendedSearchVC"];
-    [self.navigationController pushViewController:vc animated:YES];
+    if(menuOrNot){
+        if(indexPath.row==2){
+            
+                RecommendedSearchVC *vc=[self.storyboard instantiateViewControllerWithIdentifier:@"RecommendedSearchVC"];
+                [self.navigationController pushViewController:vc animated:YES];
+                }
+        else if(indexPath.row==8){
+            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"tel:9848012345"]];
+            
+        }
+    }
+    else {
+        if(indexPath.row==0){
+        MyProfileVC *vc=[self.storyboard instantiateViewControllerWithIdentifier:@"MyProfileVC"];
+        [self.navigationController pushViewController:vc animated:YES];
+    }else if(indexPath.row==1){
+        MyListingsVC *vc=[self.storyboard instantiateViewControllerWithIdentifier:@"MyListingsVC"];
+        [self.navigationController pushViewController:vc animated:YES];
+    }else if(indexPath.row==2){
+        [Utils logoutUser];
+        [self removeALlAddedViews];
+        [_userImage setImage:[UIImage imageNamed:@"user.png"]];
+        _userLbl.text=@"Login";
+    }
+    }
+    [self removeALlAddedViews];
 }
 - (void)signIn:(GIDSignIn *)signIn
 didSignInForUser:(GIDGoogleUser *)user
@@ -304,6 +330,7 @@ didDisconnectWithUser:(GIDGoogleUser *)user
     NSLog(@"%@",result);
     if(reqeustCode == 101){
         NSLog(@"%@",result);
+    
     }
     else  if (reqeustCode == 100) {
         if ([[result valueForKey:@"status"] isEqualToString:@"Failed"]) {
@@ -315,6 +342,9 @@ didDisconnectWithUser:(GIDGoogleUser *)user
             NSUserDefaults *defaults=[NSUserDefaults standardUserDefaults];
             [defaults setObject:[result valueForKey:@"user"] forKey:@"USERINFO"];
             [defaults synchronize];
+            [self removeALlAddedViews];
+//            [_userImage setImageWithURL:[[result valueForKey:@"user"] valueForKey:@""]; usingActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
+            _userLbl.text=[NSString stringWithFormat:@"%@ %@",[result valueForKey:@"fname"],[result  valueForKey:@"lname"]];
           //  [APP_DELEGATE afterLoginSucess];
             
         }

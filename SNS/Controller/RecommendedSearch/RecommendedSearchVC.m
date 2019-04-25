@@ -9,9 +9,11 @@
 #import "RecommendedSearchVC.h"
 #import "RecommendedSearchCollectionViewCell.h"
 #import "RecommendedSearch2VC.h"
+
 @interface RecommendedSearchVC ()
 {
     NSMutableArray *areasList;
+    NSMutableDictionary *selectedDict;
 }
 @end
 
@@ -27,6 +29,7 @@
 -(void)parseResult:(id)result withCode:(int)reqeustCode{
     if(reqeustCode==104){
         areasList=result;
+        [_searchCollectionView reloadData];
     }
 }
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
@@ -45,7 +48,26 @@
 {
 
         RecommendedSearchCollectionViewCell *ccell = [collectionView dequeueReusableCellWithReuseIdentifier:@"RecommendedSearchCollectionViewCell" forIndexPath:indexPath];
-    
+    NSMutableDictionary *aDic=[areasList objectAtIndex:indexPath.row];
+    ccell.areaname.text=[NSString stringWithFormat:@"%@",[aDic valueForKey:@"title"]];
+    [ccell.bgImage setImageWithURL:[aDic valueForKey:@"image"] usingActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
+    ccell.bgImage.layer.cornerRadius=10;
+    ccell.bgImage.clipsToBounds=YES;
+    ccell.areaname.textColor =[UIColor blackColor];
+    if([selectedDict valueForKey:@"id"]){
+    if([aDic valueForKey:@"id"]==[selectedDict valueForKey:@"id"]){
+        ccell.selectedImage.image=[UIImage imageNamed:@"radioon"];
+
+    }else{
+        ccell.selectedImage.image=[UIImage imageNamed:@"radiooff"];
+    }
+    }else{
+        ccell.selectedImage.image=[UIImage imageNamed:@"radiooff"];
+    }
+    ccell.selectedCity = ^{
+        self->selectedDict=[self->areasList objectAtIndex:indexPath.row];
+        [self->_searchCollectionView reloadData];
+    };
         return ccell;
     
 }

@@ -8,7 +8,7 @@
 #import <UIKit/UIKit.h>
 #import "Common.h"
 #import "Utils.h"
-//#import "UIImageView+UIActivityIndicatorForSDWebImage.h"
+#import "UIImageView+UIActivityIndicatorForSDWebImage.h"
 #import "GiFHUD.h"
 #import <JVFloatLabeledTextField/JVFloatLabeledTextField.h>
 //#import "HRMSystem/HRMSystem-Swift.h"

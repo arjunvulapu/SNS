@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		18115692222EA6450086089A /* PropertyCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18115691222EA6450086089A /* PropertyCollectionViewCell.m */; };
+		184C01DF22703B82000A948F /* MyListingsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 184C01DE22703B82000A948F /* MyListingsVC.m */; };
+		184C01E2227053B5000A948F /* ListingsTC.m in Sources */ = {isa = PBXBuildFile; fileRef = 184C01E1227053B5000A948F /* ListingsTC.m */; };
+		184C01E622708A49000A948F /* MyProfileVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 184C01E522708A49000A948F /* MyProfileVC.m */; };
 		185360F22257232D00E7936E /* facebook.png in Resources */ = {isa = PBXBuildFile; fileRef = 185360F02257232B00E7936E /* facebook.png */; };
 		185360F32257232D00E7936E /* googleL.png in Resources */ = {isa = PBXBuildFile; fileRef = 185360F12257232C00E7936E /* googleL.png */; };
 		185360F72257471200E7936E /* TTRangeSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = 185360F52257471100E7936E /* TTRangeSlider.m */; };
@@ -185,6 +188,12 @@
 		062D3A5DB8F9E3E3C3A4C85E /* Pods-SNSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SNSTests.release.xcconfig"; path = "Target Support Files/Pods-SNSTests/Pods-SNSTests.release.xcconfig"; sourceTree = "<group>"; };
 		18115690222EA6450086089A /* PropertyCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PropertyCollectionViewCell.h; sourceTree = "<group>"; };
 		18115691222EA6450086089A /* PropertyCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PropertyCollectionViewCell.m; sourceTree = "<group>"; };
+		184C01DD22703B82000A948F /* MyListingsVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyListingsVC.h; sourceTree = "<group>"; };
+		184C01DE22703B82000A948F /* MyListingsVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyListingsVC.m; sourceTree = "<group>"; };
+		184C01E0227053B5000A948F /* ListingsTC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ListingsTC.h; sourceTree = "<group>"; };
+		184C01E1227053B5000A948F /* ListingsTC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ListingsTC.m; sourceTree = "<group>"; };
+		184C01E422708A49000A948F /* MyProfileVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyProfileVC.h; sourceTree = "<group>"; };
+		184C01E522708A49000A948F /* MyProfileVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyProfileVC.m; sourceTree = "<group>"; };
 		185360F02257232B00E7936E /* facebook.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = facebook.png; sourceTree = "<group>"; };
 		185360F12257232C00E7936E /* googleL.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = googleL.png; sourceTree = "<group>"; };
 		185360F42257471000E7936E /* TTRangeSlider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTRangeSlider.h; sourceTree = "<group>"; };
@@ -505,6 +514,26 @@
 			path = SignUp;
 			sourceTree = "<group>";
 		};
+		184C01DC22703AE9000A948F /* MyListings */ = {
+			isa = PBXGroup;
+			children = (
+				184C01DD22703B82000A948F /* MyListingsVC.h */,
+				184C01DE22703B82000A948F /* MyListingsVC.m */,
+				184C01E0227053B5000A948F /* ListingsTC.h */,
+				184C01E1227053B5000A948F /* ListingsTC.m */,
+			);
+			path = MyListings;
+			sourceTree = "<group>";
+		};
+		184C01E322708A0C000A948F /* MyProfile */ = {
+			isa = PBXGroup;
+			children = (
+				184C01E422708A49000A948F /* MyProfileVC.h */,
+				184C01E522708A49000A948F /* MyProfileVC.m */,
+			);
+			path = MyProfile;
+			sourceTree = "<group>";
+		};
 		1858E27B221C101E0095CB38 = {
 			isa = PBXGroup;
 			children = (
@@ -678,6 +707,8 @@
 		18E429B8222502C3003C1C9C /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				184C01E322708A0C000A948F /* MyProfile */,
+				184C01DC22703AE9000A948F /* MyListings */,
 				186B9E5D22563AEF00359630 /* PEPhotoCropEditor */,
 				189F90612231482B000DBEB7 /* ContactSeller */,
 				18DE715A222EA0C7000E55CC /* PropertyDetailPage */,
@@ -1490,6 +1521,7 @@
 				18E42AC1222503EE003C1C9C /* MWGridViewController.m in Sources */,
 				185360F72257471200E7936E /* TTRangeSlider.m in Sources */,
 				18E42AE7222503EE003C1C9C /* FSCalendarDelegationFactory.m in Sources */,
+				184C01E622708A49000A948F /* MyProfileVC.m in Sources */,
 				18E42AB8222503EE003C1C9C /* DALabeledCircularProgressView.m in Sources */,
 				18E42AB3222503EE003C1C9C /* AFAutoPurgingImageCache.m in Sources */,
 				18E42AEB222503EE003C1C9C /* FSCalendarCollectionViewLayout.m in Sources */,
@@ -1505,6 +1537,7 @@
 				18E42AA5222503EE003C1C9C /* AFURLSessionManager.m in Sources */,
 				186B9E7222563AEF00359630 /* PECropViewController.m in Sources */,
 				18E42B1022253D94003C1C9C /* RentVC.m in Sources */,
+				184C01DF22703B82000A948F /* MyListingsVC.m in Sources */,
 				18E42AF0222503EE003C1C9C /* FSCalendarConstants.m in Sources */,
 				18E42B2F222694EC003C1C9C /* BUYVC.m in Sources */,
 				18E42AAA222503EE003C1C9C /* FXBlurView.m in Sources */,
@@ -1544,6 +1577,7 @@
 				18E42A93222503EE003C1C9C /* SDWebImageDecoder.m in Sources */,
 				18E42AE6222503EE003C1C9C /* FSCalendarDelegationProxy.m in Sources */,
 				18E42AF3222503EE003C1C9C /* FSCalendarTransitionCoordinator.m in Sources */,
+				184C01E2227053B5000A948F /* ListingsTC.m in Sources */,
 				18E42AA9222503EE003C1C9C /* SRAlertView.m in Sources */,
 				186307462228FAE800E6013E /* ResaleVC.m in Sources */,
 				18E42AC0222503EE003C1C9C /* MWTapDetectingView.m in Sources */,

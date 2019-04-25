@@ -1,0 +1,65 @@
+PODS:
+  - Bolts (1.9.0):
+    - Bolts/AppLinks (= 1.9.0)
+    - Bolts/Tasks (= 1.9.0)
+  - Bolts/AppLinks (1.9.0):
+    - Bolts/Tasks
+  - Bolts/Tasks (1.9.0)
+  - FBSDKCoreKit (4.40.0):
+    - Bolts (~> 1.9)
+  - FBSDKLoginKit (4.40.0):
+    - FBSDKCoreKit
+  - GoogleSignIn (4.4.0):
+    - "GoogleToolboxForMac/NSDictionary+URLArguments (~> 2.1)"
+    - "GoogleToolboxForMac/NSString+URLArguments (~> 2.1)"
+    - GTMSessionFetcher/Core (~> 1.1)
+  - GoogleToolboxForMac/DebugUtils (2.2.0):
+    - GoogleToolboxForMac/Defines (= 2.2.0)
+  - GoogleToolboxForMac/Defines (2.2.0)
+  - "GoogleToolboxForMac/NSDictionary+URLArguments (2.2.0)":
+    - GoogleToolboxForMac/DebugUtils (= 2.2.0)
+    - GoogleToolboxForMac/Defines (= 2.2.0)
+    - "GoogleToolboxForMac/NSString+URLArguments (= 2.2.0)"
+  - "GoogleToolboxForMac/NSString+URLArguments (2.2.0)"
+  - GTMSessionFetcher/Core (1.2.1)
+  - IQKeyboardManager (6.2.0)
+  - JVFloatLabeledTextField (1.2.1)
+  - KxMenu (1)
+  - UINavigationControllerGameFade (1.0)
+
+DEPENDENCIES:
+  - FBSDKLoginKit
+  - GoogleSignIn
+  - IQKeyboardManager
+  - JVFloatLabeledTextField
+  - KxMenu
+  - UINavigationControllerGameFade
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Bolts
+    - FBSDKCoreKit
+    - FBSDKLoginKit
+    - GoogleSignIn
+    - GoogleToolboxForMac
+    - GTMSessionFetcher
+    - IQKeyboardManager
+    - JVFloatLabeledTextField
+    - KxMenu
+    - UINavigationControllerGameFade
+
+SPEC CHECKSUMS:
+  Bolts: ac6567323eac61e203f6a9763667d0f711be34c8
+  FBSDKCoreKit: ae214474b25033399c131dc81d258e412582a2ba
+  FBSDKLoginKit: 7a1e411d46acc8834588eca437daf34de42e1d52
+  GoogleSignIn: 7ff245e1a7b26d379099d3243a562f5747e23d39
+  GoogleToolboxForMac: ff31605b7d66400dcec09bed5861689aebadda4d
+  GTMSessionFetcher: 32aeca0aa144acea523e1c8e053089dec2cb98ca
+  IQKeyboardManager: 6194101620b73af5e67900b8f89707a99de0b804
+  JVFloatLabeledTextField: cfc44e3c4d493b2ed92ede8035e8e89c2912ba64
+  KxMenu: c025365712f55fa99feb7830fbb7dea0e912be72
+  UINavigationControllerGameFade: 4cb37e06a38edd8c9df79229742eccd438b0c987
+
+PODFILE CHECKSUM: 77c567bdcb141c6740183f5bd4ec821a107e26f5
+
+COCOAPODS: 1.6.0

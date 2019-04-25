@@ -10,4 +10,9 @@
 
 @implementation RecommendedSearchCollectionViewCell
 
+- (IBAction)selectedBtnAction:(id)sender {
+    if(self.selectedCity){
+        self.selectedCity();
+    }
+}
 @end

@@ -11,7 +11,11 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface RecommendedSearchCollectionViewCell : UICollectionViewCell
-
+@property (weak, nonatomic) IBOutlet UIImageView *bgImage;
+@property (weak, nonatomic) IBOutlet UIImageView *selectedImage;
+@property (weak, nonatomic) IBOutlet UILabel *areaname;
+- (IBAction)selectedBtnAction:(id)sender;
+@property(nonatomic) void (^selectedCity)();
 @end
 
 NS_ASSUME_NONNULL_END
